@@ -235,6 +235,7 @@ h1 {
 .cv-section {
   text-align: center;
   background: linear-gradient(135deg, #608a5a 0%, #7a9471 100%);
+  color: #3a4a3a;
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
