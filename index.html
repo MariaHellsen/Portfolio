@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria Hellsen - Portfolio</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="bg-leaf leaf-1"></div>
+    <div class="bg-leaf leaf-2"></div>
+
+    <header>
+      <div class="container">
+        <img
+          src="pic/Linkedin photo_smaller.jpg"
+          alt="Profile Photo"
+          class="profile-photo"
+        />
+        <h1 class="fade-in">Maria Hellsen</h1>
+        <p class="title fade-in">FrontEnd Developer trainee</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="fade-in">About Me</h2>
+        <div class="summary fade-in">
+          <p>
+            After working in customer- and business-facing roles in tech and
+            other industries, I am now stepping into the code zone as a Frontend
+            Developer. I aim to be a tech team player, able to contribute to
+            different aspects of development—from building modern user
+            interfaces and integrating APIs to understanding business needs, UX,
+            and facilitating meetings and workshops.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="fade-in">FrondEnd dev Project</h2>
+        <div class="project-card fade-in">
+          <h3 class="project-title">🌱 ToDo App</h3>
+          <p>React project</p>
+
+          <div class="video-container">
+    <video controls>
+        <source src="video/TodoList.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+          </div>
+
+          <div class="project-links">
+            <a
+              href="https://github.com/Medieinstitutet/fed24s-the-last-todo-MariaHellsen.git"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              🔗 View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Section -->
+    <section class="section cv-section">
+      <div class="container">
+        <h2 style="color: white">My Journey</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9">
+          Interested in learning more about my experience and skills?
+        </p>
+        <a
+          href="https://www.canva.com/design/DAGiSKKG-Vg/mGB7kYoZeu3Rf3VYIJh33w/view?utm_content=DAGiSKKG-Vg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h34ea795e8e"
+          class="btn btn-secondary"
+          target="_blank"
+        >
+          📄 View My CV
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Maria Hellsen</p>
+      </div>
+    </footer>
+
+    <script>
+      // Add fade-in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = "0s";
+            entry.target.classList.add("fade-in");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Smooth hover effects for interactive elements
+      document.querySelectorAll(".btn, .project-card").forEach((element) => {
+        element.addEventListener("mouseenter", function () {
+          this.style.transform = this.classList.contains("project-card")
+            ? "translateY(-5px)"
+            : "translateY(-2px)";
+        });
+
+        element.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0)";
+        });
+      });
+    </script>
+  </body>
+</html>
