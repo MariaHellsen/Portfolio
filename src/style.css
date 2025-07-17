@@ -107,7 +107,7 @@ h1 {
 /* Summary section */
 .summary {
   font-size: 1.1rem;
-  text-align: center;
+  text-align: left;
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
