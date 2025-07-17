@@ -118,6 +118,10 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.summary p {
+  margin-bottom: 0.8rem;
+}
+
 /* Project section */
 .project-card {
   background: rgba(255, 255, 255, 0.8);
