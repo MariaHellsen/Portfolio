@@ -80,6 +80,7 @@ h1 {
 .section {
   padding: 4rem 0;
   position: relative;
+  text-align: center;
 }
 
 .section:nth-child(even) {
@@ -116,6 +117,7 @@ h1 {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
 }
 
 .summary p {
@@ -236,7 +238,7 @@ h1 {
 }
 
 /* CV section */
-.cv-section {
+/* .cv-section {
   text-align: center;
   background: linear-gradient(135deg, #608a5a 0%, #7a9471 100%);
   color: #3a4a3a;
@@ -248,7 +250,7 @@ h1 {
 .cv-section .container {
   position: relative;
   z-index: 1;
-}
+} */
 
 /* Footer */
 footer {
